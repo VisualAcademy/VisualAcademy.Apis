@@ -1,4 +1,4 @@
-namespace VisualAcademy.Apis
+namespace VisualAcademy
 {
     public class WeatherForecast
     {
