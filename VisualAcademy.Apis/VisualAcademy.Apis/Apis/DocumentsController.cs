@@ -6,6 +6,21 @@ namespace VisualAcademy.Apis
     [ApiController]
     public class DocumentsController : ControllerBase
     {
+        #region Version and Creator
+        // api/documents/version
+        [HttpGet("version")]
+        public string GetVersion() => "1.0";
+
+        // api/documents/creator
+        [HttpGet("creator")]
+        public JsonResult GetDocument()
+            => new(new List<object>
+            {
+                new { Id = 1, Name = "VisualAcademy" },
+                new { Id = 2, Name = "DevLec" }
+            }); 
+        #endregion
+
         // GET: api/<DocumentsController>
         [HttpGet]
         public IEnumerable<string> Get()
